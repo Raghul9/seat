@@ -1,0 +1,86 @@
+<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">About</a></li>
+      <li class="active"><a href="#">Terms of Use</a></li>
+      <li class="active"><a href="#">Contact Us</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      
+    </ul>
+  </div>
+</nav>-->
+
+&nbsp; &nbsp;
+
+
+  <form class="form-inline" action="/action_page.php">
+      <h2>Online Tickets Booking</h2>
+      <div class="form-group">
+          <h4>source
+              
+              <input type="text" [(ngModel)]="SearchFlight.source" name="source"/>
+              
+          </h4>
+       </div>
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+       <div class="form-group">
+          <h4>Destination
+           
+           <input type="text" [(ngModel)]="SearchFlight.destination" name="destination"/>
+       </h4>
+      </div>
+      <br>
+     <div class="form-group">
+      <h4>Date Of Journey</h4>
+     <input type="date">
+     </div>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <div class="form-group">
+          <h4>Date Of Return(Optional)</h4>
+          <input type="date">
+      </div>
+      <br><br>
+<p>
+  <button type="button" class="btn btn-info" (click)="doclick()">Search Flight</button>
+</p>
+  
+
+  </form>
+      
+
+
+  <table class="table table-hover">
+    <thead class="table-borderless table-secondary">
+      <tr>
+        <th scope="col">Id</th> &nbsp;
+        <th scope="col">Flightname</th>&nbsp;
+        <th scope="col">Source</th>&nbsp;
+        <th scope="col">Destination</th>&nbsp;
+        <th scope="col">DepartureTime</th>&nbsp;
+        <th scope="col">ArrivalTime</th>&nbsp;
+        <th scope="col">Duration</th>&nbsp;
+        <th scope="col">EconomicClassPrice</th>&nbsp;
+        <th scope="col">BusinessClassPrice</th>&nbsp;
+  
+      </tr>
+    </thead>
+    <tbody>        
+      <tr *ngFor="let flight of flight">
+        <td scope="row">{{flight.Id}}</td>&nbsp;
+        <td>{{flight.flightname}}</td>&nbsp;
+        <td>{{flight.source}}</td>&nbsp;
+        <td>{{flight.destination}}</td>&nbsp;
+        <td>{{flight.departure}}</td>&nbsp;
+        <td>{{flight.arrival}}</td>&nbsp;
+        <td>{{flight.duration}}</td>&nbsp;
+        <td><input type="radio" name="optradio">{{flight.economyClassPrice}}</td>&nbsp;
+        <td><input type="radio" name="optradio">{{flight.businessClassPrice}}</td>
+        <br>
+      </tr>             
+    </tbody>

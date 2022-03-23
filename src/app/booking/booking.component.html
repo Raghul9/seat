@@ -1,0 +1,112 @@
+<form [formGroup]="Bookingform">
+  <div class="container">
+     
+      <div class="form-group">
+        <label>Booking ID:</label>
+        <input  type="number"class="form-control" formControlName="bookingid" >
+        <div *ngIf="bookingid&& bookingid.invalid && bookingid.touched" class="text-danger">booking id  is required</div>
+    </div>
+  
+      
+        <div class="form-group">
+          <label>"bookingdatetime</label>
+          <input  type="date"class="form-control" formControlName="bookingdatetime" >
+          <div *ngIf="bookingdatetime&& bookingdatetime.invalid && bookingdatetime.touched" class="text-danger">bookingdatetime is required</div>
+      </div>
+  
+      <div class="form-group">
+          <label>totalpassengers</label>
+          <input  type="number"class="form-control" formControlName="totalpassengers" >
+          <div *ngIf="totalpassengers && totalpassengers.invalid &&totalpassengers.touched" class="text-danger">totalpassengers is required</div>
+  
+      </div>
+      <div class="form-group">
+        <label>amount</label>
+      <input  type="number"class="form-control" formControlName="amount" >
+      <div *ngIf="amount && amount.invalid &&amount.touched" class="text-danger">amount is required</div>
+  </div>
+     
+        <div class="form-group">
+          <label>bookingstatus</label>
+        <input  type="string"class="form-control" formControlName="bookingstatus" >
+        <div *ngIf="bookingstatus && bookingstatus.invalid &&bookingstatus.touched" class="text-danger">bookingstatus is required</div>
+  </div>
+  
+  <div class="form-group">
+    <label>flightno</label>
+  <input  type="number"class="form-control" formControlName="flightno" >
+  <div *ngIf="flightno && flightno.invalid &&flightno.touched" class="text-danger">flightno is required</div>
+  </div>
+        <br>
+        <p>
+          <button (click)="setRecord()">Book</button>  
+  
+         </p>
+  </div>
+ </form><!--<div class="cockpit">
+  <h1>bookingForm!</h1>
+</div>
+
+<div>
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()"  novalidate>
+
+    <div class="form-group">
+      <label for="bookingid">Booking ID:</label>
+      <input class="form-control" type="text" formControlName="bookingid" placeholder="bookid" [ngClass]="{ 'is-invalid': (f.bookingid.dirty || f.bookingid.touched) && f.bookingid.errors }">
+      <div *ngIf="!f.bookingid.valid && (f.bookingid.dirty || f.bookingid.touched)" class="invalid-feedback">
+          <div *ngIf="f.bookingid.errors" class="alert alert-danger">Invalid bookingid Name.</div>
+      </div>
+    </div><br>
+
+    <div class="form-group">
+        <label for=""bookingdatetime">Booking Date:</label>
+        <input class="form-control" type="text" formControlName="bookingdatetime" placeholder="datetime" [ngClass]="{ 'is-invalid': (f.bookingdatetime.dirty || f.bookingdatetime.touched) && f.bookingdatetime.errors }">
+        <div *ngIf="!f.bookingdatetime.valid && (f.bookingdatetime.dirty || f.bookingdatetime.touched)" class="invalid-feedback">
+            <div *ngIf="f.bookingdatetime.errors" class="alert alert-danger">invalid date</div>
+        </div>
+      </div><br>
+
+      <div class="form-group">
+        <label for="totalpassengers">Total Passengers:</label>
+        <input class="form-control" type="text" formControlName="totalpassengers" placeholder="Passengersdetails" [ngClass]="{ 'is-invalid': (f.totalpassengers.dirty || f.totalpassengers.touched) && f.totalpassengers.errors }">
+        <div *ngIf="!f.totalpassengers.valid && (f.totalpassengers.dirty || f.totalpassengers.touched)" class="invalid-feedback">
+            <div *ngIf="f.totalpassengers.errors" class="alert alert-danger">invalid Passengersdetails</div>
+        </div>
+      </div><br>
+
+      <div class="form-group">
+        <label for="amount">TotalAmount</label>
+        <input class="form-control" type="text" formControlName="amount" placeholder="amount" [ngClass]="{ 'is-invalid': (f.amount.dirty || f.amount.touched) && f.amount.errors }">
+        <div *ngIf="!f.amount.valid && (f.amount.dirty || f.amount.touched)" class="invalid-feedback">
+            <div *ngIf="f.amount.errors" class="alert alert-danger">invalid TotalAmount</div>
+        </div>
+      </div><br>
+
+      <div class="form-group">
+        <label for="bookingstatus">Booking Status:</label>
+        <input class="form-control" type="text" formControlName="bookingstatus" placeholder="status" [ngClass]="{ 'is-invalid': (f.bookingstatus.dirty || f.bookingstatus.touched) && f.bookingstatus.errors }">
+        <div *ngIf="!f.bookingstatus.valid && (f.bookingstatus.dirty || f.bookingstatus.touched)" class="invalid-feedback">
+            <div *ngIf="f.bookingstatus.errors" class="alert alert-danger">invalid status</div>
+        </div>
+      </div><br>
+
+      <div class="form-group">
+        <label for="flightno">Flight no:</label>
+        <input class="form-control" type="text" formControlName="flightno" placeholder="flightno" [ngClass]="{ 'is-invalid': (f.flightno.dirty || f.flightno.touched) && f.flightno.errors }">
+        <div *ngIf="!f.flightno.valid && (f.flightno.dirty || f.flightno.touched)" class="invalid-feedback">
+            <div *ngIf="f.flightno.errors" class="alert alert-danger">invalid flightno</div>
+        </div>
+      </div><br>
+      <div class="form-group">
+        <a routerLink="/payment"><button type="submit" class="btn btn-success ">payment</button></a>
+        </div>
+    </form>
+
+    <p>
+      <button><a routerLink="passenger" class="nav-link" routerLinkActive="active" (click)="setRecord()">Book</a></button>  
+
+     </p>-->
+
+    
+     
+
